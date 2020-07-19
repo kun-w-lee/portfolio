@@ -398,6 +398,7 @@ p {
   border-radius: 50%;
   margin: 12px;
 }
+
 .testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
 }
