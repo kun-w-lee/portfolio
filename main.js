@@ -19,7 +19,30 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+// Handle scrolling when tapping on the Contact Me button
+const contactMe = document.querySelector(".home__contact");
+contactMe.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+// Handle scrolling when tapping on the logo
+const home = document.querySelector(".navbar__logo");
+home.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  // window.location.replace(
+  //   window.location.pathname + window.location.search + window.location.hash
+  // );
+  scrollIntoView(link);
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
