@@ -108,6 +108,7 @@ p {
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
   color: black;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -133,6 +134,11 @@ p {
 }
 
 .navbar__menu__item:hover {
+  transition: color 0.3s ease;
+  color: grey;
+}
+
+#navbar.navbar--dark .navbar__menu__item:hover {
   background-color: var(--color-dark-grey);
 }
 
