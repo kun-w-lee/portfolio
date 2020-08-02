@@ -98,21 +98,31 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-black);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+  color: black;
 }
 
-.navbar__menu {
-  display: flex;
+#navbar.navbar--dark {
+  background-color: var(--color-black);
+  padding: 8px;
+  color: white;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu {
+  display: flex;
 }
 
 .navbar__menu__item {
@@ -138,6 +148,7 @@ p {
 /* Home */
 #home {
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
