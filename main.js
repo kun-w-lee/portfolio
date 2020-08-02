@@ -40,7 +40,7 @@ contactMe.addEventListener("mouseleave", (e) => {
 
 // Handle scrolling when tapping on the logo
 const homebtn = document.querySelector(".navbar__logo");
-homebtn.addEventListener("mouseLeave", (e) => {
+homebtn.addEventListener("click", (e) => {
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
@@ -49,12 +49,22 @@ homebtn.addEventListener("mouseLeave", (e) => {
 
   // refreshing the page
 
-  // window.location.replace(
-  //   window.location.pathname + window.location.search + window.location.hash
-  // );
+  window.location.replace(
+    window.location.pathname + window.location.search + window.location.hash
+  );
 
   // going back to the top
-  scrollIntoView(link);
+  // scrollIntoView(link);
+});
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
 });
 
 // Make home slowly fade to transparent as the window scrolls down
@@ -65,6 +75,10 @@ document.addEventListener("scroll", () => {
   contactMe.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// Handle click on the "arrow up" button
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
