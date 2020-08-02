@@ -28,18 +28,41 @@ contactMe.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// when mouse on Contact me btn -> recover opacity
+contactMe.addEventListener("mouseenter", (e) => {
+  contactMe.style.opacity = 1;
+});
+
+// when mouse off Contact me btn -> lose opacity again
+contactMe.addEventListener("mouseleave", (e) => {
+  contactMe.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
 // Handle scrolling when tapping on the logo
-const home = document.querySelector(".navbar__logo");
-home.addEventListener("click", (event) => {
+const homebtn = document.querySelector(".navbar__logo");
+homebtn.addEventListener("mouseLeave", (e) => {
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
+
+  // refreshing the page
+
   // window.location.replace(
   //   window.location.pathname + window.location.search + window.location.hash
   // );
+
+  // going back to the top
   scrollIntoView(link);
+});
+
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+  contactMe.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 function scrollIntoView(selector) {
