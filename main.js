@@ -19,7 +19,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Handle scrolling when tapping on the Contact Me button
@@ -48,7 +55,6 @@ homebtn.addEventListener("click", (e) => {
   }
 
   // refreshing the page
-
   window.location.replace(
     window.location.pathname + window.location.search + window.location.hash
   );
