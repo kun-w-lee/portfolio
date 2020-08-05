@@ -135,12 +135,14 @@ p {
 }
 
 .navbar__menu__item:hover {
-  transition: color 0.3s ease;
-  color: grey;
+  transition: color 0.1s ease;
+  color: white;
+  background-color: var(--color-dark-grey);
 }
 
 #navbar.navbar--dark .navbar__menu__item:hover {
   background-color: var(--color-dark-grey);
+  color: white;
 }
 
 .navbar__toggle-btn {
@@ -320,13 +322,13 @@ p {
   padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
