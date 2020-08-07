@@ -11,6 +11,12 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+});
+
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
@@ -23,11 +29,8 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
-// Navbar toggle button for small screen
-const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navbarToggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
-});
+// the line slides as user clicks on the menu items
+// const navbarMenuItems = document,querySelector()
 
 // Handle scrolling when tapping on the Contact Me button
 const contactMe = document.querySelector(".home__contact");
