@@ -42,7 +42,6 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
   sidebarMenu.classList.remove("open");
-  navbar.classList.remove("open");
   homeSec.classList.remove("open");
   aboutSec.classList.remove("open");
   skillsSec.classList.remove("open");
@@ -154,7 +153,6 @@ const contactSec = document.querySelector("#contact");
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
   sidebarMenu.classList.toggle("open");
-  navbar.classList.toggle("open");
   homeSec.classList.toggle("open");
   aboutSec.classList.toggle("open");
   skillsSec.classList.toggle("open");
