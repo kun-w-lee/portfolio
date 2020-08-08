@@ -43,7 +43,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -100,6 +100,32 @@ p {
   background-color: black;
 }
 
+#navbar.open .navbar__menu {
+  filter: brightness(50%);
+}
+
+#home.open {
+  filter: brightness(50%);
+}
+
+#about.open {
+  filter: brightness(50%);
+}
+
+#skills.open {
+  filter: brightness(50%);
+}
+#work.open {
+  filter: brightness(50%);
+}
+
+#testimonials.open {
+  filter: brightness(50%);
+}
+
+#contact.open {
+  filter: brightness(50%);
+}
 /* Navbar */
 #navbar {
   position: fixed;
@@ -114,7 +140,6 @@ p {
   box-sizing: content-box;
   background-color: transparent;
   margin: 0 auto;
-  z-index: 1000;
   -webkit-transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     padding 0.2s ease-in-out, background 0.1s ease;
   transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
@@ -125,6 +150,7 @@ p {
     padding 0.2s ease-in-out, background 0.1s ease;
   -o-transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     padding 0.2s ease-in-out, background 0.1s ease;
+  z-index: 10;
 }
 
 .container {
@@ -159,7 +185,8 @@ p {
   display: relative;
   margin: 0;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-weight: var(--weight-bold);
 }
 
 .navbar__logo a:hover {
@@ -204,7 +231,6 @@ p {
   transition: 0.3s;
   list-style: none outside;
   transform: translateY(0);
-  opacity: 1;
   box-sizing: border-box;
   word-break: keep-all;
 }
@@ -263,16 +289,6 @@ p {
   width: 100%;
 }
 
-.navbar__toggle-btn {
-  position: relative;
-  right: -10px;
-  top: 8.5px;
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-}
-
 #navbar.navbar--dark {
   background-color: var(--color-black);
   color: white;
@@ -281,10 +297,173 @@ p {
   padding-bottom: 10px;
 }
 
+#navbar .navbar__toggle-btn {
+  position: relative;
+  right: -10px;
+  top: 8.5px;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* Sidebar */
+
+#sidebar {
+  position: fixed;
+  width: 720px;
+  height: 100vh;
+  padding: 5rem 0;
+  background-color: darkslategray;
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+  right: -720px;
+}
+
+#sidebar.open {
+  right: 0px;
+}
+
+#sidebar.sidebar--dark .toggle-btn {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  z-index: 1000;
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  right: 70px;
+  top: 50px;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  z-index: 1000;
+}
+
+#sidebar .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+#sidebar .container .sidebar__menu {
+  list-style: none-outside;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+
+#sidebar .container .sidebar__menu li {
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: black;
+}
+
+#sidebar .container .sidebar__menu li a {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  font-size: 57.6px;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+  font-weight: 200;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.5ms ease-in-out;
+}
+
+#sidebar .container .sidebar__menu li a:hover {
+  transition: color 0.1s ease;
+  cursor: pointer;
+  opacity: 1;
+}
+
+#sidebar .container .sidebar__menu li a:after {
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: white;
+  height: 1px;
+}
+
+#sidebar .container .sidebar__menu li a:hover:after {
+  width: 100%;
+}
+
+.profile-info-wrap .profile-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.profile-info-wrap {
+  position: relative;
+  padding: 40px 60px;
+  color: #fff;
+  max-width: 720px;
+  font-weight: 300;
+  margin-top: 5rem;
+  margin-bottom: 40px;
+}
+
+.profile-location {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #eee;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+}
+
+.sns-wrap {
+  position: relative;
+}
+
+.sns-wrap a {
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 1rem;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Home */
 #home {
-  padding: 16px;
-  padding-top: 120px;
+  padding: 80px 0px;
   text-align: center;
 }
 
@@ -295,8 +474,40 @@ p {
   border: 2px solid var(--color-light-white);
 }
 
+.container-scroll-trigger {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.home__container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  padding-left: 240px;
+  z-index: 3;
+  margin-top: 80px;
+
+  /* padding-left: 450px; */
+}
+
 .home__title,
-.home__description {
+.home__descrpition {
+  color: white;
+  text-align: left;
+}
+
+.home__title {
+  margin: 0;
+}
+
+.home__descrpition {
+  font-weight: 5;
+  font-size: 20px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 }
 
 .home__contact {
@@ -641,6 +852,10 @@ p {
     padding-left: 40px;
     padding-right: 40px;
   }
+  .container-scroll-trigger {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media screen and (max-width: 782px) and (min-width: 769px) {
@@ -670,6 +885,7 @@ p {
     font-size: 24px;
     cursor: pointer;
     color: white;
+    opacity: 1;
   }
 
   #navbar {
@@ -677,10 +893,11 @@ p {
     align-items: flex-start;
     background-color: var(--color-black);
     color: white;
+    padding: 20px 0;
   }
 
-  #navbar.navbar--dark {
-    padding: 16px;
+  .navigation {
+    padding: 0;
   }
 
   .navbar__menu {
@@ -690,13 +907,27 @@ p {
     display: none;
   }
 
+  .navbar__menu li {
+    position: relative;
+    left: 100px;
+  }
+
   .navbar__menu.open {
     display: flex;
   }
 
-  #navbar.navbar--dark .navbar__toggle-btn {
-    color: white;
-    top: 18px;
+  .navbar__logo {
+    position: relative;
+    right: 50px;
+  }
+
+  .container-scroll-trigger {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .home__container {
+    padding-left: 10%;
   }
 
   .section {

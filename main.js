@@ -2,19 +2,35 @@
 
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
+const sidebarMenu = document.querySelector("#sidebar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
+    sidebarMenu.classList.add("sidebar--dark");
   } else {
     navbar.classList.remove("navbar--dark");
+    sidebarMenu.classList.remove("sidebar--dark");
   }
 });
 
-// Navbar toggle button for small screen
-const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navbarToggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
+// Handle scrolling when tapping on the sidebar menu
+sidebarMenu.addEventListener("click", (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+
+  sidebarMenu.classList.toggle("open");
+  navbar.classList.toggle("open");
+  homeSec.classList.toggle("open");
+  aboutSec.classList.toggle("open");
+  skillsSec.classList.toggle("open");
+  workSec.classList.toggle("open");
+  testimonialsSec.classList.toggle("open");
+  contactSec.classList.toggle("open");
+  scrollIntoView(link);
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -25,12 +41,16 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-  navbarMenu.classList.remove("open");
+  sidebarMenu.classList.toggle("open");
+  navbar.classList.toggle("open");
+  homeSec.classList.toggle("open");
+  aboutSec.classList.toggle("open");
+  skillsSec.classList.toggle("open");
+  workSec.classList.toggle("open");
+  testimonialsSec.classList.toggle("open");
+  contactSec.classList.toggle("open");
   scrollIntoView(link);
 });
-
-// the line slides as user clicks on the menu items
-// const navbarMenuItems = document,querySelector()
 
 // Handle scrolling when tapping on the Contact Me button
 const contactMe = document.querySelector(".home__contact");
@@ -122,3 +142,35 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+// changes the diplay when toggle button is clicked
+const homeSec = document.querySelector("#home");
+const aboutSec = document.querySelector("#about");
+const skillsSec = document.querySelector("#skills");
+const workSec = document.querySelector("#work");
+const testimonialsSec = document.querySelector("#testimonials");
+const contactSec = document.querySelector("#contact");
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  sidebarMenu.classList.toggle("open");
+  navbar.classList.toggle("open");
+  homeSec.classList.toggle("open");
+  aboutSec.classList.toggle("open");
+  skillsSec.classList.toggle("open");
+  workSec.classList.toggle("open");
+  testimonialsSec.classList.toggle("open");
+  contactSec.classList.toggle("open");
+});
+
+const sidebarToggleBtn = document.querySelector(".toggle-btn");
+sidebarToggleBtn.addEventListener("click", () => {
+  sidebarMenu.classList.toggle("open");
+  navbar.classList.toggle("open");
+  homeSec.classList.toggle("open");
+  aboutSec.classList.toggle("open");
+  skillsSec.classList.toggle("open");
+  workSec.classList.toggle("open");
+  testimonialsSec.classList.toggle("open");
+  contactSec.classList.toggle("open");
+});

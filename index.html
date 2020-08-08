@@ -18,7 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700&display=swap" rel="stylesheet">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -41,47 +43,59 @@
                 <li><a data-link="#contact">Contact</a></li>
               </ul>
             </nav>
-
-            <!-- Toggle Button -->
-            <button class="navbar__toggle-btn">
+            <button class="navbar__toggle-btn" ">
               <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- <div class="menu-container active">
-              <nav class="more-navigation">
-                <div class="container">
-                  <ul class="navbar__menu-1">
-                    <li><a data-link="#skills">Skills</a></li>
-                    <li><a data-link="#work">Work</a></li>
-                    <li><a data-link="#testimonials">Testimonials</a></li>
-                    <li><a data-link="#contact">Contact</a></li>
-                  </ul>
-                </div>
-
-              </nav>
-
-            </div> -->
-
         </div>
       </div>
 
-
+      <!-- Toggle Button -->
+      <div id ="sidebar">
+        <button class="toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="container">
+          <ul class="sidebar__menu">
+            <li><a data-link="#about">About</a></li>
+            <li><a data-link="#skills">Skills</a></li>
+            <li><a data-link="#work">Work</a></li>
+            <li><a data-link="#testimonials">Testimonials</a></li>
+            <li><a data-link="#contact">Contact</a></li>
+          </ul>
+          <div class="profile-info-wrap">
+            <h2 class="profile-name">Kun Lee</h2>
+            <div class="profile-location">
+              Geomatic, Software Engineer • Toronto, Canada
+            </div>
+            <div class="sns-wrap">
+              <a href="https://github.com/kun-w-lee" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fa fa-linkedin-square"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+      </div>
 
       <!-- Home -->
       <section id="home">
-        <div class="home__container">
-          <img
-          src="imgs/profile.JPG"
-          alt="Kun's profile photo"
-          class="home__avatar"
-          />
-          <h1 class="home__title">
-            Hello, <br />
-            I'm Kun Lee
-          </h1>
-          <h2 class="home__descrpition">
-            A software Engineer currently residing in Toronto, Canada.
-          </h2>
+        <div class="container-scroll-trigger">
+          <div class="home__container">
+            <h1 class="home__title">
+              About
+            </h1>
+            <h2 class="home__descrpition">
+              Design, Develop, Operate Spatial Information, <br/>
+              UI Designer, Software Engineer, Web Developer
+    
+            </h2>
+            <!-- <img
+            src="imgs/profile.JPG"
+            alt="Kun's profile photo"
+            class="home__avatar"
+            /> -->
+          </div>
         </div>
         <button class="home__contact">Contact Me</button>
       </section>
