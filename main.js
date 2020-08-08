@@ -41,14 +41,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
-  sidebarMenu.classList.toggle("open");
-  navbar.classList.toggle("open");
-  homeSec.classList.toggle("open");
-  aboutSec.classList.toggle("open");
-  skillsSec.classList.toggle("open");
-  workSec.classList.toggle("open");
-  testimonialsSec.classList.toggle("open");
-  contactSec.classList.toggle("open");
+  sidebarMenu.classList.remove("open");
+  navbar.classList.remove("open");
+  homeSec.classList.remove("open");
+  aboutSec.classList.remove("open");
+  skillsSec.classList.remove("open");
+  workSec.classList.remove("open");
+  testimonialsSec.classList.remove("open");
+  contactSec.classList.remove("open");
   scrollIntoView(link);
 });
 
