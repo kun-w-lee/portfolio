@@ -23,7 +23,7 @@ sidebarMenu.addEventListener("click", (event) => {
   }
 
   sidebarMenu.classList.toggle("open");
-  navbar.classList.toggle("open");
+  navbarMenu.classList.toggle("open");
   homeSec.classList.toggle("open");
   aboutSec.classList.toggle("open");
   skillsSec.classList.toggle("open");
@@ -42,6 +42,7 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
   sidebarMenu.classList.remove("open");
+  navbarMenu.classList.remove("open");
   homeSec.classList.remove("open");
   aboutSec.classList.remove("open");
   skillsSec.classList.remove("open");
@@ -153,18 +154,7 @@ const contactSec = document.querySelector("#contact");
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
   sidebarMenu.classList.toggle("open");
-  homeSec.classList.toggle("open");
-  aboutSec.classList.toggle("open");
-  skillsSec.classList.toggle("open");
-  workSec.classList.toggle("open");
-  testimonialsSec.classList.toggle("open");
-  contactSec.classList.toggle("open");
-});
-
-const sidebarToggleBtn = document.querySelector(".toggle-btn");
-sidebarToggleBtn.addEventListener("click", () => {
-  sidebarMenu.classList.toggle("open");
-  navbar.classList.toggle("open");
+  navbarMenu.classList.toggle("open");
   homeSec.classList.toggle("open");
   aboutSec.classList.toggle("open");
   skillsSec.classList.toggle("open");

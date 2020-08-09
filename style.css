@@ -101,7 +101,7 @@ p {
   background-color: black;
 }
 
-#navbar.open .navbar__menu {
+.navbar__menu.open {
   filter: brightness(50%);
 }
 
@@ -151,7 +151,7 @@ p {
     padding 0.2s ease-in-out, background 0.1s ease;
   -o-transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     padding 0.2s ease-in-out, background 0.1s ease;
-  z-index: 20;
+  z-index: 9990;
 }
 
 .container {
@@ -174,7 +174,7 @@ p {
   position: absolute;
   float: left;
   color: #fff;
-  z-index: 22;
+  z-index: 9999;
 }
 
 .navbar__logo a {
@@ -182,7 +182,6 @@ p {
   outline: 0;
   left: 30px;
   z-index: 10 !important;
-
   display: relative;
   margin: 0;
   color: white;
@@ -234,6 +233,7 @@ p {
   transform: translateY(0);
   box-sizing: border-box;
   word-break: keep-all;
+  z-index: 9999 !important;
 }
 
 .navigation .navbar__menu li {
@@ -261,7 +261,7 @@ p {
   font-weight: 400;
   font-size: 16px;
   z-index: 200;
-  color: grey;
+  color: gray;
   position: relative;
   text-decoration: none;
 }
@@ -298,39 +298,53 @@ p {
   padding-bottom: 10px;
 }
 
+#navbar .btn_container {
+  z-index: 9999;
+  position: relative;
+}
+
 #navbar .navbar__toggle-btn {
   position: relative;
   right: -10px;
-  top: 8.5px;
+  top: 5px;
   float: right;
   font-size: 24px;
   cursor: pointer;
   color: white;
   opacity: 1;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 /* Sidebar */
 
+.sidebar__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 #sidebar {
   position: fixed;
   width: 720px;
-  height: 100vh;
+  height: 100%;
   padding: 5rem 0;
   background-color: darkslategray;
-  z-index: 10;
+  z-index: 9998;
   transition: all 0.5s ease-in-out;
   right: -720px;
 }
 
 #sidebar.open {
   right: 0px;
+  height: 100%;
 }
 
 #sidebar.sidebar--dark .toggle-btn {
   position: absolute;
-  right: 70px;
-  top: 20px;
+  right: 90px;
+  top: 15px;
   float: right;
   font-size: 24px;
   cursor: pointer;
@@ -341,8 +355,8 @@ p {
 
 #sidebar .toggle-btn {
   position: absolute;
-  right: 70px;
-  top: 50px;
+  right: 90px;
+  top: 45px;
   float: right;
   font-size: 24px;
   cursor: pointer;
@@ -360,6 +374,7 @@ p {
   margin: 0 auto;
   padding-left: 80px;
   padding-right: 80px;
+  z-index: 9999;
 }
 
 #sidebar .container .sidebar__menu {
@@ -856,6 +871,10 @@ p {
     padding-left: 40px;
     padding-right: 40px;
   }
+  #sidebar .toggle-btn {
+    right: 30px;
+    top: 45px;
+  }
 }
 
 @media screen and (max-width: 782px) and (min-width: 769px) {
@@ -875,7 +894,47 @@ p {
     --font-micro: 12px;
   }
 
-  .navbar__toggle-btn {
+  .navbar__logo {
+    position: relative;
+    right: 50px;
+  }
+
+  #sidebar.open {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #sidebar .container .sidebar__menu li {
+    height: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: middle;
+  }
+
+  #sidebar .container .sidebar__menu li a {
+    position: relative;
+    bottom: 10px;
+    font-size: 30px;
+    height: 100%;
+    text-align: middle;
+  }
+
+  #sidebar .container .sidebar__menu li a:after {
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    top: 80px;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: white;
+    height: 1px;
+  }
+
+  #sidebar .navbar__toggle-btn {
     display: block;
     color: white;
 
