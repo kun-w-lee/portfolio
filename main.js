@@ -53,22 +53,6 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
-// Handle scrolling when tapping on the Contact Me button
-const contactMe = document.querySelector(".home__contact");
-contactMe.addEventListener("click", () => {
-  scrollIntoView("#contact");
-});
-
-// when mouse on Contact me btn -> recover opacity
-contactMe.addEventListener("mouseenter", (e) => {
-  contactMe.style.opacity = 1;
-});
-
-// when mouse off Contact me btn -> lose opacity again
-contactMe.addEventListener("mouseleave", (e) => {
-  contactMe.style.opacity = 1 - window.scrollY / homeHeight;
-});
-
 // Handle scrolling when tapping on the logo
 const homebtn = document.querySelector(".navbar__logo");
 homebtn.addEventListener("click", (e) => {
@@ -102,7 +86,6 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
-  contactMe.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // Handle click on the "arrow up" button

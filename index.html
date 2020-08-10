@@ -102,7 +102,24 @@
             /> -->
           </div>
         </div>
-        <button class="home__contact">Contact Me</button>
+        <!-- video -->
+      </section>
+
+      <section id="banner">
+        <div class="slideList">
+          <div class="slideImg">
+            <h2>fade effect image 1</h2>
+            <img src="imgs/home/ban01.png" alt="image1">
+          </div>
+          <div class="slideImg">
+            <h2>fade effect image 2</h2>
+            <img src="imgs/home/ban02.jpg" alt="image2">
+          </div>
+          <div class="slideImg">
+            <h2>fade effect image 3</h2>
+            <img src="imgs/home/ban03.jpg" alt="image3">
+          </div>
+        </div>
       </section>
 
       <!-- About -->
@@ -471,5 +488,17 @@
       </button>
     </body>
   </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script>
+    $(".slideList").children("div:gt(0)").hide();
+    var current = 0;
+    setInterval(function(){
+      var next = (current + 1) % 3;
+      $(".slideList").find("div").eq(current).fadeOut();
+      $(".slideList").find("div").eq(next).fadeIn();
+      current = next;
+    }, 4000);
+  </script>
   <script src="main.js" defer></script>
 </html>
