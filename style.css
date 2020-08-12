@@ -261,7 +261,7 @@ p {
   font-weight: 400;
   font-size: 16px;
   z-index: 200;
-  color: gray;
+  color: rgba(255, 255, 255, 0.726);
   position: relative;
   text-decoration: none;
 }
@@ -487,7 +487,7 @@ p {
 /* Home */
 #home {
   padding-top: 80px;
-  padding-bottom: 0px;
+  padding-bottom: 1000px;
   text-align: center;
   z-index: 0;
   height: 1000px;
@@ -526,6 +526,8 @@ p {
 
 .home__title {
   margin: 0;
+  font-weight: 400;
+  font-size: 64px;
 }
 
 .home__descrpition {
@@ -533,42 +535,6 @@ p {
   font-size: 20px;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 }
-
-/* banner */
-/* #banner {
-  width: 100%;
-  text-align: center;
-  height: 800px;
-  z-index: 10;
-  margin-top: 80px;
-  margin: none;
-}
-
-.slideList {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-right: 0;
-  overflow: hidden;
-}
-.slideList .slideImg {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-.slideList .slideImg h2 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 10px 30px;
-  border-radius: 25px;
-}
-.slideList .slideImg img {
-  width: 100%;
-  height: 100%;
-} */
 
 .image_container {
   position: absolute;
@@ -585,15 +551,16 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .slideshow-img {
   position: absolute;
-  padding-top: 30px;
+  padding-top: 70px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 720px;
+  height: 800px;
   padding-bottom: 30px;
   object-fit: cover;
   opacity: 0;
@@ -625,6 +592,9 @@ p {
 }
 
 /* About */
+#about {
+  padding-bottom: 10;
+}
 #about h1,
 p {
   color: white;
@@ -656,18 +626,23 @@ p {
   transform: rotate(-20deg) scale(1.1);
 }
 
-.major__title,
-.major__description {
-  color: var(--color-dark-grey);
+.major__title {
+  color: white;
 }
 
 .major__description {
   font-size: var(--font-small);
+  color: rgba(255, 255, 255, 0.712);
+}
+
+.about__jobs {
+  background-color: rgba(157, 157, 233, 0.747);
 }
 
 .job {
   display: flex;
   align-items: center;
+  padding: 20px;
 }
 
 .job__description {
@@ -677,7 +652,7 @@ p {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: white;
 }
 
 .job__name {

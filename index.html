@@ -118,37 +118,25 @@
                   <h2 class = "slideText"> fade effect image 3</h2>
               </div>
             </div>
-            <!-- <div class="intro-header">
-              <h1>Codnig-Journey</h1>
-              <p>It's allZ</p>
-            </div> -->
           </header>
         </div>
       </section>
 
-      <!-- <section id="banner">
-        <div class="slideList">
-          <div class="slideImg">
-            <h2>fade effect image 1</h2>
-            <img src="imgs/home/ban01.png" alt="image1">
-          </div>
-          <div class="slideImg">
-            <h2>fade effect image 2</h2>
-            <img src="imgs/home/ban02.png" alt="image2">
-          </div>
-          <div class="slideImg">
-            <h2>fade effect image 3</h2>
-            <img src="imgs/home/ban03.png" alt="image3">
-          </div>
-        </div>
-      </section> -->
-
       <!-- About -->
       <section id="about" class= "section section__container" >
         <h1>About me</h1>
-        <p>
-          Paragraphs about me.
+        <p style = "display: inline-block;"> Studying in </p> 
+        <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Univerity of Waterloo </p> 
+        <p style = "display: inline-block;"> for major in </p>
+        <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Geomatics </p>
+        <p style = "display: inline-block;"> and minor in </p> 
+        <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Computer Science. <br/> </p>
+        <p style = "display: inline-block;">   Able to design, operate, and develop different kinds of spatial data with </p>
+        <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;">  ArcGIS, QGIS, Tableau. </br> </p>
+        <p style = "display: inline-block;">   Developed many gaming or application projects with </p>
+        <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;">  JavaScript, HTML, CSS, Python, C, Kivy, DrRacket. </p>
         </p>
+        <!-- rgb(0, 255, 115); -->
         <div class="about__majors">
           <div class="major">
             <div class="major__icon">
@@ -156,18 +144,16 @@
             </div>
             <h2 class="major__title">Front-end</h2>
             <div class="major__description">
-              HTML, CSS, JavaScript, TypeScript,
-              <br />React, Vue, Web APIs
+              HTML, CSS, JavaScript, Kivy
             </div>
           </div>
             <div class="major">
               <div class="major__icon">
-                <i class="fas fa-mobile"></i>
+                <i class="fas fa-globe-americas"></i>
               </div>
-              <h2 class="major__title">Mobile</h2>
+              <h2 class="major__title">Data Spatial</h2>
               <div class="major__description">
-                Android, ios, React Native, Flutter,
-                <br />Java, Swift, Kotlin
+                ArcGIS, QGIS, Tableau
               </div>
             </div>
               <div class="major">
@@ -176,8 +162,7 @@
               </div>
               <h2 class="major__title">Back-end</h2>
               <div class="major__description">
-                Java, JavaScript, Go, NodeJS,
-                <br />Rest APIs, GraphGL
+                Python, C, JavaScript, DrRacket
               </div>
             </div>
           </div>
@@ -197,13 +182,14 @@
           </div>
           <div class="job">
             <img
-              src="imgs/jobs/logo-samsung.png"
+              src="imgs/jobs/UW-logo.png"
               alt="samsung"
               class="job__logo"
             />
             <div class="job__description">
-              <p class="job__name">Currently working at Samsung</p>
-              <p class="job__period">2019-2020</p>
+              <p class="job__name" style="display: inline-block">Currently Studying in University of Waterloo </p>
+                <p class="job__name" style="display: inline-block; color: rgb(241, 194, 194)">(Geomatics and Computer Science)</p>
+              <p class="job__period">2019~</p>
             </div>
           </div>
         </div>
@@ -509,17 +495,5 @@
       </button>
     </body>
   </section>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-  </script>
-  <script>
-    $(".slideList").children("div:gt(0)").hide();
-    var current = 0;
-    setInterval(function(){
-      var next = (current + 1) % 3;
-      $(".slideList").find("div").eq(current).fadeOut();
-      $(".slideList").find("div").eq(next).fadeIn();
-      current = next;
-    }, 4000);
-  </script> -->
   <script src="main.js" defer></script>
 </html>
