@@ -487,17 +487,10 @@ p {
 /* Home */
 #home {
   padding-top: 80px;
-  padding-bottom: 1000px;
+  padding-bottom: 1100px;
   text-align: center;
   z-index: 0;
   height: 1000px;
-}
-
-.home__avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid var(--color-light-white);
 }
 
 .container-scroll-trigger {
@@ -592,17 +585,154 @@ p {
 }
 
 /* About */
-#about {
-  padding-bottom: 10;
+
+.about__inner {
+  position: relative;
+  width: inherit;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px 10px;
+  background-color: white;
 }
-#about h1,
-p {
-  color: white;
+
+.profile {
+  z-index: 20;
+  top: -100px;
+  position: relative;
+  font-size: 38px;
+  transform: translate(0%, 16.0236%) translate3d(0px, 0px, 0px);
 }
+
+.profile__photo {
+  position: relative;
+  width: 398px;
+  height: 330px;
+  background-image: url(imgs/profile.JPG);
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+  background-size: 110%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  box-sizing: border-box;
+  display: block;
+}
+
+.profile__photo:after {
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  display: block;
+  width: inherit;
+  height: inherit;
+  content: "";
+  border: 2px solid blue;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-style: none;
+  color: black;
+}
+
+.profile__nickname {
+  display: inline-block;
+  font-family: "Montserrat", AppleGothic, sans-serif, Helvetica;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 38px;
+}
+
+.profile__name {
+  display: inline-block;
+  font-size: 45%;
+  margin-left: 0.3em;
+  color: #747474;
+}
+
+.about__title {
+  margin-top: 120px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  text-align: right;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1.74;
+  display: block;
+
+  color: #141414;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-family: "Quicksand", sans-serif;
+}
+
+.about__title-accent {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+}
+
+.about__title-accent:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -10px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: #141414;
+}
+
+.about__text {
+  position: relative;
+  margin-top: 180px;
+  font-size: 19px;
+  letter-spacing: -0.2px;
+  line-height: 1.95;
+  font-family: "Quicksand", sans-serif;
+}
+
+.about__text-item:first-child {
+  margin-top: 0;
+}
+
+.about__text-item {
+  margin-top: 40px;
+}
+
+#about h1 {
+  font-weight: 30;
+}
+
 .about__majors {
+  padding-top: 100px;
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
+  text-align: center;
+}
+
+.major__upper__title {
+  text-align: left;
+  font-weight: 1000;
+  font-family: "Quicksand", sans-serif;
 }
 
 .major__icon {
@@ -612,9 +742,10 @@ p {
   font-size: 70px;
   margin: auto;
   color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  border: 2px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .major__icon i {
@@ -627,12 +758,13 @@ p {
 }
 
 .major__title {
-  color: white;
+  color: black;
+  text-align: center;
 }
 
 .major__description {
   font-size: var(--font-small);
-  color: rgba(255, 255, 255, 0.712);
+  color: black;
 }
 
 .about__jobs {
@@ -665,7 +797,16 @@ p {
 
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  /* background-image: url(imgs/skills/stars.jpg);
+  filter: brightness(30%); */
+}
+
+#skills h1 {
+  color: black;
+}
+
+#skills p {
+  color: rgb(240, 194, 194);
 }
 
 .skill {
@@ -718,7 +859,10 @@ p {
 }
 
 /* Work */
-
+#work h1,
+#work h2 {
+  color: white;
+}
 .work__categories {
   margin: 40px;
 }
