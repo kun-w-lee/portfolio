@@ -14,31 +14,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Text Scrolling Change
-// const aboutToWork = document.querySelector(".section-conect__word");
-// const workTitle = document.querySelector(".work__title");
-
-// const aboutInner = document.querySelector(".skillset__left");
-// const clientRect = aboutInner.getBoundingClientRect();
-// const relativeTop = clientRect.top;
-// const scrolledTopLength = window.pageYOffset;
-// const aboutToWorkHeight = scrolledTopLength + relativeTop;
-// document.addEventListener("scroll", () => {
-//   if (window.scrollY > aboutToWorkHeight - 150) {
-//     aboutToWork.classList.add("visible");
-//     workTitle.classList.add("visible");
-//   } else {
-//     aboutToWork.classList.remove("visible");
-//     workTitle.classList.remove("visible");
-//   }
-
-//   if (window.scrollY > aboutToWorkHeight) {
-//     workTitle.classList.add("visible");
-//   } else {
-//     workTitle.classList.remove("visible");
-//   }
-// });
-
 // Handle scrolling when tapping on the sidebar menu
 sidebarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -218,7 +193,7 @@ var scene = new ScrollMagic.Scene({
   triggerHook: 0.8,
 })
   .setClassToggle(".section-conect__word", "visible")
-  .addTo(controller)
-  .addIndicators({
-    name: "1",
-  });
+  .addTo(controller);
+// .addIndicators({
+//   name: "1",
+// });
