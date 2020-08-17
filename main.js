@@ -14,6 +14,31 @@ document.addEventListener("scroll", () => {
   }
 });
 
+// Text Scrolling Change
+// const aboutToWork = document.querySelector(".section-conect__word");
+// const workTitle = document.querySelector(".work__title");
+
+// const aboutInner = document.querySelector(".skillset__left");
+// const clientRect = aboutInner.getBoundingClientRect();
+// const relativeTop = clientRect.top;
+// const scrolledTopLength = window.pageYOffset;
+// const aboutToWorkHeight = scrolledTopLength + relativeTop;
+// document.addEventListener("scroll", () => {
+//   if (window.scrollY > aboutToWorkHeight - 150) {
+//     aboutToWork.classList.add("visible");
+//     workTitle.classList.add("visible");
+//   } else {
+//     aboutToWork.classList.remove("visible");
+//     workTitle.classList.remove("visible");
+//   }
+
+//   if (window.scrollY > aboutToWorkHeight) {
+//     workTitle.classList.add("visible");
+//   } else {
+//     workTitle.classList.remove("visible");
+//   }
+// });
+
 // Handle scrolling when tapping on the sidebar menu
 sidebarMenu.addEventListener("click", (event) => {
   const target = event.target;
@@ -151,15 +176,11 @@ navbarToggleBtn.addEventListener("click", () => {
 // Image Slideshow
 const slideshowImages = document.querySelectorAll(".banner .slideshow-img");
 const slideshowText = document.querySelectorAll(".banner .slideText");
-
 const nextImageDelay = 5000;
 let currentImageCounter = 0;
-
 slideshowImages[currentImageCounter].style.opacity = 1;
 slideshowText[currentImageCounter].style.opacity = 1;
-
 setInterval(nextImage, nextImageDelay);
-
 function nextImage() {
   const tempCounter = currentImageCounter;
   setTimeout(() => {
@@ -170,3 +191,34 @@ function nextImage() {
   slideshowImages[currentImageCounter].style.opacity = 1;
   slideshowText[currentImageCounter].style.opacity = 1;
 }
+
+var controller = new ScrollMagic.Controller();
+// Profile picture movement
+var about_tween_profile = TweenMax.fromTo(
+  ".profile",
+  1,
+  {
+    y: "50%",
+  },
+  {
+    y: "0%",
+  }
+);
+var aboutProfilescene = new ScrollMagic.Scene({
+  triggerElement: "#about",
+  duration: "70%",
+  offset: "-200%",
+})
+  .setTween(about_tween_profile)
+  .addTo(controller);
+
+// work text movement
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#work", //트리거 설정
+  triggerHook: 0.8,
+})
+  .setClassToggle(".section-conect__word", "visible")
+  .addTo(controller)
+  .addIndicators({
+    name: "1",
+  });

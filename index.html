@@ -103,15 +103,15 @@
             <div class="intro-slideshow">
               <div class="slideImg">
                 <img src="imgs/home/ban01.png" class="slideshow-img">
-                <h2 class = "slideText"> image 1</h2>
+                <h2 class = "slideText"> sample image 1</h2>
               </div>
               <div class="slideImg">
                 <img src="imgs/home/ban02.png" class="slideshow-img">
-                <h2 class = "slideText"> fade effect image 2</h2>
+                <h2 class = "slideText"> sample image 2</h2>
               </div>
               <div class="slideImg">
                 <img src="imgs/home/ban03.png" class="slideshow-img">
-                  <h2 class = "slideText"> fade effect image 3</h2>
+                  <h2 class = "slideText"> sample image 3</h2>
               </div>
             </div>
           </header>
@@ -123,7 +123,7 @@
         <div class="about__inner">
           <div class="profile">
             <div class="profile__photo">
-              <span class="blind">profile picture</span>
+              <span data-aos="fade-up"class="blind">profile picture</span>
             </div>
             <div class="profile__info">
               <p class="profile__nickname">Kun Lee</p>
@@ -174,21 +174,11 @@
               <br>
               That's what I dream of. 🤩
             </p>
-            <!-- <p style = "display: inline-block;"> Studying in </p> 
-            <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Univerity of Waterloo </p> 
-            <p style = "display: inline-block;"> for major in </p>
-            <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Geomatics </p>
-            <p style = "display: inline-block;"> and minor in </p> 
-            <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;"> Computer Science. <br/> </p>
-            <p style = "display: inline-block;">   Able to design, operate, and develop different kinds of spatial data with </p>
-            <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;">  ArcGIS, QGIS, Tableau. </br> </p>
-            <p style = "display: inline-block;">   Developed many gaming or application projects with </p>
-            <p style="color: rgba(0, 255, 115, 0.61); display: inline-block;">  JavaScript, HTML, CSS, Python, C, Kivy, DrRacket. </p> -->
-            
           </div>
-          <div id="major" class="about__majors">
+          <div id="skills" class="about__majors">
             <h1 class="major__upper__title">
-              Let me introduce <br> my majors! 👋
+              Let me introduce <br> my majors! 
+              <img src="imgs/about/hand.png" alt="icon" class="shake">
             </h1>
             <div class="major">
               <div class="major__icon">
@@ -218,8 +208,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="about__jobs">
+            <div class="about__jobs">
             <div class="job">
               <img
                 src="imgs/jobs/logo-samsung.png"
@@ -245,20 +234,14 @@
               </div>
             </div>
           </div>
+          </div>
+          
         </div>
       </section>
 
       <!-- Skills -->
-      <section id="skills"class= "section">
+      <section id ="skill2" class= "section">
         <div class="about__inner">
-        <h1>Skills</h1>
-        <p>
-          Experiences with many phases of software life-cycle. </br>
-          Passion for learning new technologies. Capable of working within a team environment
-          and independently. </br>
-          Ability to plan and time schedule, work under strict
-          time pressure and adapt quickly when needed.
-        </p>
         <div class="skillset">
           <div class="skillset__left">
             <h3 class="skillset__title">Skills</h3>
@@ -347,28 +330,33 @@
 
       <!-- Work -->
       <section id="work"class= "section">
-        <div class="section__container">
-          <h1>My work</h1>
-        <h2>Projects</h2>
+        <div class="section__connect1">
+          <span class="section-conect__word">
+            <!-- style = "opacity: 0; transform: translate(0%, -100%) matrix(0, 1, -1, 0, 0, 0);" -->
+          Take a Look, It's-
+          </span>
+        </div>
+        <div class="about__inner">
+            <h1 class = "work__title">My work ✍️</h1>
         <div class="work__categories">
           <button class="category__btn selected" data-filter="*">
             All<span class="category__count">8</span>
           </button>
-          <button class="category__btn" data-filter="front-end">
-            Front-end<span class="category__count">3</span>
+          <button class="category__btn" data-filter="Coding">
+            Coding<span class="category__count">3</span>
           </button>
-          <button class="category__btn" data-filter="back-end">
-            Back-end<span class="category__count">3</span>
+          <button class="category__btn" data-filter="Spatial Journal">
+            Spatial Journal<span class="category__count">3</span>
           </button>
-          <button class="category__btn" data-filter="mobile">
-            Mobile<span class="category__count">3</span>
+          <button class="category__btn" data-filter="Spatial Design">
+            Spatial Design<span class="category__count">3</span>
           </button>
         </div>
         <div class="work__projects">
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="front-end"
+            target="blank" data-type="Coding"
           >
             <img
               src="imgs/projects/youtube.png"
@@ -383,7 +371,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="front-end"
+            target="blank" data-type="Coding"
           >
             <img
               class="project__img"
@@ -398,7 +386,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="back-end"
+            target="blank" data-type="Coding"
           >
             <img
               class="project__img"
@@ -413,7 +401,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="back-end"
+            target="blank" data-type="Spatial Journal"
           >
             <img
               class="project__img"
@@ -428,7 +416,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="mobile"
+            target="blank" data-type="Spatial Journal"
           >
             <img
               class="project__img"
@@ -443,7 +431,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="mobile"
+            target="blank" data-type="Spatial Journal"
           >
             <img
               class="project__img"
@@ -458,7 +446,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="front-end"
+            target="blank" data-type="Spatial Design"
           >
             <img
               class="project__img"
@@ -473,7 +461,7 @@
           <a
             href="https://github.com/kun-w-lee/portfolio"
             class="project"
-            target="blank" data-type="front-end"
+            target="blank" data-type="Spatial Design"
           >
             <img
               class="project__img"
@@ -550,7 +538,12 @@
       <button class ="arrow-up">
         <i class="fas fa-arrow-up"></i>
       </button>
-    </body>
-  </section>
+      
+    </section>
+  </body>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="main.js" defer></script>
 </html>
