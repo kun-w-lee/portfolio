@@ -181,11 +181,14 @@ var about_tween_profile = TweenMax.fromTo(
 );
 var aboutProfilescene = new ScrollMagic.Scene({
   triggerElement: "#about",
-  duration: "70%",
+  duration: "100%",
   offset: "-200%",
 })
   .setTween(about_tween_profile)
   .addTo(controller);
+// .addIndicators({
+//   name: "1",
+// });
 
 // work text movement
 var scene = new ScrollMagic.Scene({
