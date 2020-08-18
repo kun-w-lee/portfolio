@@ -192,8 +192,41 @@ var scene = new ScrollMagic.Scene({
   triggerElement: "#work", //트리거 설정
   triggerHook: 0.8,
 })
-  .setClassToggle(".section-conect__word", "visible")
+  .setClassToggle(".section-connect__word", "visible")
   .addTo(controller);
 // .addIndicators({
 //   name: "1",
 // });
+
+// work ending text1 movement
+var workEndingScene = new ScrollMagic.Scene({
+  triggerElement: "#testimonials.section2", //트리거 설정
+  triggerHook: 0.8,
+})
+  .setClassToggle(".section-connect__word2", "visible")
+  .addTo(controller);
+
+// work ending text2 movement
+var workEndingScene2 = new ScrollMagic.Scene({
+  triggerElement: "#testimonials.section2", //트리거 설정
+  triggerHook: 0.6,
+})
+  .setClassToggle(".section-connect__word3", "visible")
+  .addTo(controller);
+// .addIndicators({
+//   name: "1",
+// });
+
+// Testimonial Title Movement
+var pr_tween_scroll = TweenMax.to(".testimonial__title__container", 2, {
+  x: "-80%",
+  ease: Linear.easeNone,
+});
+var prScrollScene = new ScrollMagic.Scene({
+  triggerElement: ".section2",
+  triggerHook: 0.6,
+  duration: "60%",
+  offset: 120,
+})
+  .setTween(pr_tween_scroll)
+  .addTo(controller);
