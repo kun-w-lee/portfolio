@@ -522,6 +522,11 @@ p {
   position: relative;
 }
 
+.sns-wrap a:hover {
+  transform: scale(1.1);
+  color: var(--color-light-purple);
+}
+
 .sns-wrap a {
   display: inline-block;
   margin: 0 auto;
@@ -1293,6 +1298,16 @@ p {
 .contact__email,
 .contact__rights {
   color: var(--color-white);
+}
+
+.contact__email {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+}
+
+.contact__email:hover {
+  transform: scale(0.8);
+  color: rgb(255, 206, 45);
 }
 
 .contact__title {
