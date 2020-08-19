@@ -1503,6 +1503,11 @@ p {
   #home .home__descrpition {
     font-size: 13px;
   }
+
+  #about .about__title {
+    font-size: 18px;
+    right: 20px;
+  }
   .section__connect1 .section-connect__word {
     left: 30px;
     font-size: 13px;
