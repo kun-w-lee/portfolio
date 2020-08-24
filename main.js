@@ -150,21 +150,22 @@ navbarToggleBtn.addEventListener("click", () => {
 
 // Image Slideshow
 const slideshowImages = document.querySelectorAll(".banner .slideshow-img");
-const slideshowText = document.querySelectorAll(".banner .slideText");
+
 const nextImageDelay = 5000;
 let currentImageCounter = 0;
 slideshowImages[currentImageCounter].style.opacity = 1;
-slideshowText[currentImageCounter].style.opacity = 1;
+slideshowImages[currentImageCounter + 1].style.zIndex = -100;
+slideshowImages[currentImageCounter + 2].style.zIndex = -100;
 setInterval(nextImage, nextImageDelay);
 function nextImage() {
   const tempCounter = currentImageCounter;
   setTimeout(() => {
     slideshowImages[tempCounter].style.opacity = 0;
-    slideshowText[tempCounter].style.opacity = 0;
+    slideshowImages[tempCounter].style.zIndex = -100;
   }, 1000);
   currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
+  slideshowImages[currentImageCounter].style.zIndex = 1;
   slideshowImages[currentImageCounter].style.opacity = 1;
-  slideshowText[currentImageCounter].style.opacity = 1;
 }
 
 var controller = new ScrollMagic.Controller();
