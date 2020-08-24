@@ -154,19 +154,18 @@ const slideshowImages = document.querySelectorAll(".banner .slideshow-img");
 const nextImageDelay = 5000;
 let currentImageCounter = 0;
 slideshowImages[currentImageCounter].style.opacity = 1;
-slideshowImages[currentImageCounter + 1].style.zIndex = -100;
-slideshowImages[currentImageCounter + 2].style.zIndex = -100;
+slideshowImages[currentImageCounter].style.zIndex = 3;
 setInterval(nextImage, nextImageDelay);
 
 function nextImage() {
   const tempCounter = currentImageCounter;
   setTimeout(() => {
     slideshowImages[tempCounter].style.opacity = 0;
-    slideshowImages[tempCounter].style.zIndex = -100;
-  }, 1000);
+    slideshowImages[tempCounter].style.zIndex = 1;
+  }, 100);
   currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
   slideshowImages[currentImageCounter].style.opacity = 1;
-  slideshowImages[currentImageCounter].style.zIndex = 1;
+  slideshowImages[currentImageCounter].style.zIndex = 3;
 }
 
 var controller = new ScrollMagic.Controller();
