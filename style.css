@@ -613,24 +613,9 @@ p {
   padding-bottom: 30px;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in;
   cursor: pointer;
-}
-
-.slideLink {
-  cursor: pointer;
-}
-
-.slideText {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 10px 30px;
-  border-radius: 25px;
-  opacity: 0;
-  transition: opacity 0.75s ease-in-out;
+  z-index: 1;
 }
 
 /* Section Common */
