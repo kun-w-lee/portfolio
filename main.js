@@ -150,7 +150,6 @@ navbarToggleBtn.addEventListener("click", () => {
 
 // Image Slideshow
 const slideshowImages = document.querySelectorAll(".banner .slideshow-img");
-
 const nextImageDelay = 5000;
 let currentImageCounter = 0;
 slideshowImages[currentImageCounter].style.opacity = 1;
