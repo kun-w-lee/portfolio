@@ -27,6 +27,7 @@ sidebarMenu.addEventListener("click", (event) => {
   homeSec.classList.toggle("open");
   aboutSec.classList.toggle("open");
   skillsSec.classList.toggle("open");
+  skills2Sec.classList.toggle("open");
   workSec.classList.toggle("open");
   testimonialsSec.classList.toggle("open");
   contactSec.classList.toggle("open");
@@ -47,6 +48,7 @@ navbarMenu.addEventListener("click", (event) => {
   homeSec.classList.remove("open");
   aboutSec.classList.remove("open");
   skillsSec.classList.remove("open");
+  skills2Sec.classList.remove("open");
   workSec.classList.remove("open");
   testimonialsSec.classList.remove("open");
   contactSec.classList.remove("open");
@@ -131,6 +133,7 @@ function scrollIntoView(selector) {
 const homeSec = document.querySelector("#home");
 const aboutSec = document.querySelector("#about");
 const skillsSec = document.querySelector("#skills");
+const skills2Sec = document.querySelector("#skill2");
 const workSec = document.querySelector("#work");
 const testimonialsSec = document.querySelector("#testimonials");
 const contactSec = document.querySelector("#contact");
@@ -143,6 +146,7 @@ navbarToggleBtn.addEventListener("click", () => {
   homeSec.classList.toggle("open");
   aboutSec.classList.toggle("open");
   skillsSec.classList.toggle("open");
+  skills2Sec.classList.toggle("open");
   workSec.classList.toggle("open");
   testimonialsSec.classList.toggle("open");
   contactSec.classList.toggle("open");

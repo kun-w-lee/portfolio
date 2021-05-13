@@ -138,6 +138,11 @@ p {
 #skills.open {
   filter: brightness(50%);
 }
+
+#skill2.open {
+  filter: brightness(50%);
+}
+
 #work.open {
   filter: brightness(50%);
 }
