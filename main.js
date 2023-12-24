@@ -1,5 +1,34 @@
 "use strict";
 
+// // Loading Page
+    // Set a minimum time for the loading page (3 seconds)
+    var minTime = 5000;
+
+    // Function to hide the loading element
+    function hideLoading() {
+      var loadingElement = document.querySelector('.pre-loader');
+      loadingElement.style.display = 'none';
+
+      // Scroll to the top of the page
+      window.scrollTo(0, 0);
+    }
+
+    // Wait for the entire page and its resources to be fully loaded
+    window.onload = function() {
+      // Calculate the time remaining to meet the minimum time requirement
+      var currentTime = new Date().getTime();
+      var timeElapsed = currentTime - startTime;
+
+      // Calculate the remaining time to wait
+      var remainingTime = Math.max(0, minTime - timeElapsed);
+
+      // Wait for the remaining time before hiding the loading element
+      setTimeout(hideLoading, remainingTime);
+    };
+
+    // Record the start time when the script is executed
+    var startTime = new Date().getTime();
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const sidebarMenu = document.querySelector("#sidebar");
